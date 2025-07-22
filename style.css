@@ -9,6 +9,7 @@ body{
 
  .navbar{
     position:sticky;
+    z-index: 2;
     background-color: white;
     top: 0;
     padding: 10px;
@@ -80,11 +81,47 @@ body{
 background-color: #A435F0;
     color: white;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid 2px #A435F0;
+}
+.Categories p:hover{
+    transition: 1s;
+    background-color: white;
+    color:#A435F0;
+    border: solid 2px #A435F0;
+    border-radius: 30px;
+    padding: 10px;
+
 }
 .sale-image img{
     padding: 10px;
     margin-right: 10px;
     margin-left: 3px;
+}
+.sale-image__offer{
+    width: 35%;
+    border: solid 2px black;
+    background-color: white;
+    padding: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    left:5%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0%;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0%{
+        opacity: 0%;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    
 }
 .Recommended{
     padding: 20px;
@@ -97,6 +134,7 @@ background-color: #A435F0;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around;
+    padding-bottom: -30px;
 
 }
 .course-card{
@@ -124,29 +162,33 @@ background-color: #A435F0;
 }
 .topics__container p:hover{
     background-color: #A435F0;
+    transition: 1s;
     color: white;
+    cursor: pointer;
 }
 .popular{
     padding: 20px;
-
+    
 }
 .popular__title {
     p{
-    margin-bottom: 10px;
-}}
-.popular__container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-grow: 1;
-    flex-basis: 25%;
-    margin-top:10px;
+        margin-bottom: 10px;
+    }}
+    .popular__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-grow: 1;
+        flex-basis: 25%;
+        margin-top:10px;
+        padding-bottom: 20px;
 }
 .footer{
     width: 100;
     padding: 30px;
     background-color: black;
     color: white;
+    margin: -30px;
 }
 .footer__one{
     display: flex;
